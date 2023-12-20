@@ -23,3 +23,14 @@ if (koalaAvg > dolphinAvg) {
 } else {
   console.log("It was a draw 😦");
 }
+
+// Bonus conditions
+if (koalaAvg >= 100 && koalaAvg > dolphinAvg) {
+  console.log("Koalas win!");
+} else if (dolphinAvg >= 100 && dolphinAvg > koalaAvg) {
+  console.log("Dolphins win!");
+} else if (koalaAvg < 100 && dolphinAvg < 100) {
+  console.log("Both teams disqualified");
+} else if (koalaAvg >= 100 && dolphinAvg >= 100 && koalaAvg === dolphinAvg) {
+  console.log("It's a draw 😦");
+}
