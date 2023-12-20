@@ -39,8 +39,6 @@ console.log("Your age is " + ageZaeem); // Concatenation
 console.log("Yashfa's age is " + ageYashfa);
 console.log(ageZaeem * 2, ageYashfa / 10, 2 ** 3); // ** is the exponentiation operator
 
-// *template strings later on too
-
 // Assignment Operators
 let x = 10;
 x += 15;
@@ -56,3 +54,137 @@ console.log(ageYashfa <= ageZaeem);
 
 // Operator Precedence
 // used MDN to explain precedence and left to right vs right to left
+
+// *Strings
+// Basics
+const firstName = "Hafiz Muhammad Zaeem";
+const job = "Software Engineer";
+const zaeem =
+  "I'm " + firstName + ", a " + ageZaeem + " years old " + job + "!";
+console.log(zaeem);
+
+// Template literals => ES6
+const zaeemNew = `I'm ${firstName}, a ${ageZaeem} years old ${job}!`;
+console.log(zaeemNew);
+
+// Multi line strings
+console.log(
+  "String with \n\
+multiple \n\
+lines"
+);
+
+// Multi line template literals
+console.log(`String with 
+multiple
+lines`);
+
+// *Control Flow
+
+const driverAge = 15;
+// Checks whether a condition is fulfilled and runs the corresponding block of code
+if (driverAge >= 18) {
+  console.log("The driver can start learning for driving license! 🚗");
+} else {
+  const yearsLeft = 18 - driverAge;
+  console.log(
+    `The driver is not old enought yet! Wait another ${yearsLeft} years or the police will arrive.🚓`
+  );
+}
+
+if (birthYearZaeem <= 2000) {
+  const century = "20th";
+  console.log(century); // Because const is blocked scoped
+} else {
+  const century = "21st";
+  console.log(century); // Because const is blocked scoped
+}
+
+//* Type Conversion and Coercion
+/* 
+  Conversion is when you manually change the type of a value
+  Coercion is when JS automatically or implicityly changes the type of a value
+*/
+
+//* Conversion
+//! JS can only convert to and from three types, Boolean(), Number(), String()
+
+// String to number
+const inputYear = Number("1998");
+console.log(inputYear + 18);
+console.log(Number("Zaeem")); // NaN => when an operation involving numbers does not produce a new number
+console.log(typeof NaN); // number => it is still somehow a number but an invalid number
+console.log(Number(false), Number(true));
+
+// Numbe to string
+console.log(String(23), 23);
+console.log(String(false), String(true));
+
+// Number and string to boolean
+/*
+  Truthy values: which convert to true when converted to boolean through Boolean()
+  Falsy values: vice versa, in JS, only 5 falsy values: 0,'',undefined, null, NaN
+  Everything else is a truthy value
+*/
+console.log(
+  Boolean(0),
+  Boolean(""),
+  Boolean(undefined),
+  Boolean(null),
+  Boolean(NaN)
+); // Falsy
+console.log(Boolean(1), Boolean(2), Boolean("a"), Boolean("b"), Boolean(23)); // Truthy
+
+// *Coercion
+/* Happens whenever an operator is dealing with values of different types
+  So, JS then behind the scenes converts type of one value to type of the 
+  other value so that the operation can then be performed
+*/
+console.log("I am a " + 23 + " years old developer!"); // Num to str with '+'
+console.log("23" - "10" - 3); // Str to Num with '-'
+console.log("23" * "2"); // str to num with '*'
+console.log("23" / "2"); // str to num with '/'
+/* Coercion allows us to write a lot less and a lot more readable code
+ ! When trying to anticipate the result of coercion, go operator to oprator
+*/
+
+//* Equality Operators
+if (age === 31) {
+  // No type coercion, always use this, forget about the other one
+  console.log("Congratulations! You just became an adult 💂‍♂️");
+}
+if (age == 31) {
+  // Forget about its existence
+  console.log("Congratulations! You just became an adult 💂‍♂️ (loosely)");
+}
+
+// const favorite = Number(prompt("What's your favorite number?"));
+const favorite = 23;
+console.log(favorite);
+console.log(typeof favorite);
+
+if (favorite === 23) {
+  console.log("Cool! 23 is an amazing prime number.");
+} else if (favorite === 7) {
+  console.log("Cool! 7 is also an amazing number");
+} else {
+  console.log("Number is neither 23 nor 7");
+}
+
+//* Logical Operators
+const hasDriversLicense = true;
+const hasGoodVision = false;
+console.log(hasDriversLicense && hasGoodVision);
+console.log(hasDriversLicense || hasGoodVision);
+console.log(!hasDriversLicense);
+console.log(!hasGoodVision);
+
+const shouldDrive = hasDriversLicense && hasGoodVision && !isTired;
+if (shouldDrive) {
+  console.log("Sarah is eligible to drive");
+} else {
+  console.log("Sarah is not eligible to drive");
+}
+
+const isTired = true;
+console.log(hasDriversLicense || (hasGoodVision && isTired));
