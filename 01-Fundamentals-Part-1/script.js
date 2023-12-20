@@ -188,3 +188,74 @@ if (shouldDrive) {
 
 const isTired = true;
 console.log(hasDriversLicense || (hasGoodVision && isTired));
+
+//* Switch Statement
+const day = "sunday";
+
+switch (
+  day // Does a strict comparison day === 'monday'
+) {
+  case "monday":
+    console.log("Plan course structure");
+    console.log("Go to coding meetup");
+    break;
+
+  case "tuesday":
+    console.log("Prepare theory videos");
+    break;
+
+  case "wednesdsay":
+  case "thursday":
+    console.log("Write code examples"); // same block will run for the above two values
+    break;
+
+  case "friday":
+    console.log("Record videos");
+    break;
+
+  case "saturday":
+  case "sunday":
+    console.log("Enjoy the weekend! 😉");
+    break;
+
+  default:
+    console.log("Not a valid day");
+    break;
+}
+
+// Writing the same logic in if-else statements
+if (day === "monday") {
+  console.log("Plan course structure");
+  console.log("Go to coding meetup");
+} else if (day === "tuesday") {
+  console.log("Prepare theory videos");
+} else if (day === "wednesday" || day === "thursday") {
+  console.log("Write code examples"); // same block will run for the above two values
+} else if (day === "friday") {
+  console.log("Record videos");
+} else if (day === "saturday" || day === "sunday") {
+  console.log("Enjoy the weekend! 😉");
+} else {
+  console.log("Not a valid day");
+}
+
+//* Satements vs Expressions
+/**
+ * Expression is a piece of code that produce a value.(words)
+ * Statements are pieces of code that perform some action but
+ * do not produce a value. (full sentences)
+ */
+const expression = "my feelings";
+
+//* Ternary/Conditional Operator
+/*
+Only one line of code can be executed for true and false conditions
+respectively, which is why we will always need if-else to execute 
+bigger blockks of code, since ternary operator is an expression and 
+not a statement whereas if-else is a statement.
+*/
+age >= 18 ? console.log("You're an adult") : console.log("You're not an adult");
+
+// Ususally used to assgin values to variables conditionally
+const isAdult = age >= 18 ? true : false;
+isAdult ? console.log("Adult") : console.log("Minor");
