@@ -34,6 +34,15 @@ const ages = [
 ];
 console.log(ages);
 
+const funcs = [
+  function (myAge) {
+    return myAge * 2;
+  },
+  1,
+  2,
+]; // any kind of expression can exist in an array
+console.log(funcs);
+
 //* Basics Array methods
 
 // Add elements
