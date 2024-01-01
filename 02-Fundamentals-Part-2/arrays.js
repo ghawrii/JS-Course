@@ -1,3 +1,4 @@
+"use strict"; // Use newer versions of JS, ignore code written in legacy methods
 /**
  * *Array: an object that contains a bundle of expressions
  * *and methods to handle those expressions.
@@ -63,3 +64,6 @@ console.log(friends.indexOf("Hamza"));
 console.log(friends.indexOf("bob"));
 console.log(friends.includes("Shakoor"));
 console.log(friends.includes("23")); // checks with ===
+
+const [value, setValue] = ["Hello,", "World!"];
+console.log(value, setValue);
