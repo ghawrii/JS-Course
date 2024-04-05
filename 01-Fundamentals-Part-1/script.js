@@ -193,7 +193,7 @@ console.log(hasDriversLicense || (hasGoodVision && isTired));
 const day = "sunday";
 
 switch (
-  day // Does a strict comparison day === 'monday'
+day // Does a strict comparison day === 'monday'
 ) {
   case "monday":
     console.log("Plan course structure");

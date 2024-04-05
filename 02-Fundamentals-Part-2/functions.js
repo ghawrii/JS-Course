@@ -49,23 +49,30 @@ const appleOrangeJuice = fruitProcessor(2, 4);
 console.log(appleOrangeJuice);
 
 //* Function Expression/Anonymous function
+/** 
+ * In JS functions are just values, they're not a separate type like 
+ * strings or boolean, instead they are just values.
+ * 
+ * 
+*/
 const fruitProcessor1 = function (apples, oranges) {
   return `Juice with ${apples} apples and ${oranges} oranges.`;
 };
 console.log(fruitProcessor1(4, 6));
 
 function calcAge1(birthYear) {
-  return 2023 - birthYear; // Function declaration, hoisted as a function
+  return 2023 - birthYear; // Function declaration, hoisted as a function, can be called before declaration.
 }
 
 const calcAge2 = function (birthYear) {
   return 2023 - birthYear; // Function expression,not hoisted,calcAge2 is hoisted instead
 };
 
+// Function expressions are preferred because they enforce a structure in our code.
 /**
  * ? What are behind the scenes differences between a function declaration and an expression?
- * ? Since in JS, values have data type and not the variables, how does it reserve space in memory without knowing how much it'll
- * ? need?
+ * ? Since in JS, values have data type and not the variables, how does it reserve space in memory without
+ * ? knowing how much it'll need?
  */
 
 //* Arrow Function Expressions
@@ -74,6 +81,7 @@ const calcAge2 = function (birthYear) {
  * one liner functions
  */
 
+// Returns in arrow functions happens implicityly, no return statement needed.
 const calcAge3 = (birthYear) => 2023 - birthYear; // takes the left side as args, returns the right side expression automatically
 console.log(calcAge3(1998));
 
