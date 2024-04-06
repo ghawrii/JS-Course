@@ -91,3 +91,23 @@ const yearsUntilRetirement = (birthYear, firstName) => {
   return `${firstName} retires in ${65 - age} years.`;
 };
 console.log(yearsUntilRetirement(1998, "Zaeem"));
+// Arrow functions also don't get a 'this' keyword
+
+
+// Function declaration
+console.log(myFunc(3, 5));
+function myFunc(myParam, myParam1) {
+  return myParam * myParam1;
+}
+
+// Function expression
+//* Try,Catch,Finally,Throw
+try {
+  console.log(myFunc1(3, 5)); // Will produce an error.s
+}
+catch {
+  console.log("Function expressions are not hoisted! \nIdiot...!"); // which will be handled here
+}
+
+const myFunc1 = (myParam, myParam1) => myParam * myParam1;
+console.log(myFunc1(3, 5)); // This will work fine.
