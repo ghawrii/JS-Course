@@ -32,9 +32,7 @@ const jonas = {
   getSummary: function () {
     // Challenge
     console.log(
-      `${this.firstName} is a ${this.age}-year old ${this.job} and he has ${
-        this.hasDriversLicense ? "a" : "no"
-      } driver's license.`
+      `${this.firstName} is a ${this.age}-year old ${this.job} and he has ${this.hasDriversLicense ? "a" : "no"} driver's license.`
     );
   },
 };
